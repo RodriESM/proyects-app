@@ -1,0 +1,14 @@
+.footer {
+  margin-top: 40px;
+  border-top:1px solid #aaa;;
+  padding-top: 40px;
+}
+.footer .menu a{
+display: block;
+margin-bottom: 10px;
+text-decoration: none;
+}
+
+.four a{
+  color: white;
+}
