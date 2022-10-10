@@ -11,9 +11,9 @@ export class CursosComponent implements OnInit {
 
   public whises: Whis[] = [];
 
-  page: number = 1;
-  count: number = 0;
-  tableSize: number = 12;
+  public page: number = 1;
+  public count: number = 0;
+  public tableSize: number = 12;
 
   public contador: number = 0;
 
