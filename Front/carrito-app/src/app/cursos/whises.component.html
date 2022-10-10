@@ -1,7 +1,16 @@
 <div id="lista-cursos" class="container">
   <h1 id="encabezado" class="encabezado"><b>Lista de deseos</b></h1>
-  <div *ngFor="let whis of whises">
+  <div *ngFor="let whis of whises | paginate
+  : {
+      itemsPerPage: tableSize,
+      currentPage: page,
+      totalItems: count
+    };
+let i = index">
     <div class="row" *ngIf="isMultiplo() == true elseBlock"></div><!--.row-->
     <app-card [whis]="whis" #elseBlock></app-card>
   </div>
+</div>
+<div class="d-flex justify-content-center">
+  <pagination-controls previousLabel="Prev"  nextLabel="Next"  (pageChange)="onTableDataChange($event)"></pagination-controls>
 </div>

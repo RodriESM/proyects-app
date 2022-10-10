@@ -8,6 +8,7 @@ export const WHISES_DATA: Whis[] =
     web: 'Juan Pedro',
     precio: 125,
     comprado: false,
+
     cantidad: 0,
     imagen:  '../assets/img/curso1.jpg',
     estrellas: '../assets/img/estrellas.png'

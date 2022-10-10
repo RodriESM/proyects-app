@@ -11,7 +11,9 @@ export class CursosComponent implements OnInit {
 
   public whises: Whis[] = [];
 
-  public pageOfItems: Array<Whis> = new Array();
+  page: number = 1;
+  count: number = 0;
+  tableSize: number = 12;
 
   public contador: number = 0;
 
@@ -25,8 +27,12 @@ export class CursosComponent implements OnInit {
     return WHISES_DATA;
   }
 
-  onChangePage(pageOfItems: Array<any>){
-    this.pageOfItems = pageOfItems;
+  onTableDataChange(event: any) {
+    this.page = event;
+  }
+  onTableSizeChange(event: any): void {
+    this.tableSize = event.target.value;
+    this.page = 1;
   }
 
   isMultiplo(): boolean{

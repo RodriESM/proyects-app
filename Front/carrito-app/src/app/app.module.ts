@@ -15,6 +15,8 @@ import { HeaderComponent } from './header/header.component';
 import { BarraComponent } from './barra/barra.component';
 import { CursosComponent } from './cursos/whises.component';
 import { CardComponent } from './cursos/card/card.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { CardComponent } from './cursos/card/card.component';
     BarraComponent,
     CursosComponent,
     CardComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { CardComponent } from './cursos/card/card.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
