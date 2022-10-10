@@ -1,27 +1,32 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { Curso } from './curso';
-import { CURSOS_DATA } from './cursos.json';
+import { Whis } from './whis';
+import { WHISES_DATA } from './whises.json';
 
 @Component({
   selector: 'app-cursos',
-  templateUrl: './cursos.component.html',
-  styleUrls: ['./cursos.component.css']
+  templateUrl: './whises.component.html',
+  styleUrls: ['./whises.component.css']
 })
 export class CursosComponent implements OnInit {
 
-  @Output()
-  public cursos: Curso[] = [];
+  public whises: Whis[] = [];
+
+  public pageOfItems: Array<Whis> = new Array();
 
   public contador: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.cursos = this.getCursos();
+    this.whises = this.getWhises();
   }
 
-  getCursos(): Curso[]{
-    return CURSOS_DATA;
+  getWhises(): Whis[]{
+    return WHISES_DATA;
+  }
+
+  onChangePage(pageOfItems: Array<any>){
+    this.pageOfItems = pageOfItems;
   }
 
   isMultiplo(): boolean{

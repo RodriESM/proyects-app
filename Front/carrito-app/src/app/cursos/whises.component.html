@@ -1,0 +1,7 @@
+<div id="lista-cursos" class="container">
+  <h1 id="encabezado" class="encabezado"><b>Lista de deseos</b></h1>
+  <div *ngFor="let whis of whises">
+    <div class="row" *ngIf="isMultiplo() == true elseBlock"></div><!--.row-->
+    <app-card [whis]="whis" #elseBlock></app-card>
+  </div>
+</div>

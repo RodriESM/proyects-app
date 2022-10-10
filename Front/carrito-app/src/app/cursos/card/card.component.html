@@ -1,12 +1,13 @@
   <div class="four columns">
       <div class="card my-2 mx-1">
-          <img src={{curso.imagen}} class="imagen-curso u-full-width">
+          <img src={{whis.imagen}} class="imagen-curso u-full-width">
           <div class="info-card">
-              <h4>{{curso.titulo}}</h4>
-              <p>{{curso.instructor}}</p>
-              <img src={{curso.estrellas}}>
-              <p class="precio">{{curso.precio}}  <span class="u-pull-right ">$15</span></p>
-              <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
+              <h4>{{whis.titulo}}</h4>
+              <a><p>{{whis.web}}</p></a>
+              <img src={{whis.estrellas}}>
+              <p *ngIf="whis.comprado == true" class="precio comprado">Comprado<span class="u-pull-right ">{{whis.precio}}€  </span></p>
+              <p class="precio">No comprado  <span class="u-pull-right ">{{whis.precio}}€  </span></p>
+              <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar al carrito</a>
           </div>
       </div> <!--.card-->
   </div>

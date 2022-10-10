@@ -21,6 +21,11 @@
   margin-bottom: 5px;
 }
 .info-card .precio {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.info-card .precio .comprado {
   text-decoration: line-through;
   font-size: 18px;
   margin-top: 10px;

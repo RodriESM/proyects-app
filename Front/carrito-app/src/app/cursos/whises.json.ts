@@ -1,12 +1,13 @@
-import { Curso } from "./curso";
+import { Whis } from "./whis";
 
-export const CURSOS_DATA: Curso[] =
+export const WHISES_DATA: Whis[] =
 [
   {
     id: "1",
     titulo: "HTML5, CSS3, JavaScript para Principiantes",
-    instructor: 'Juan Pedro',
+    web: 'Juan Pedro',
     precio: 125,
+    comprado: false,
     cantidad: 0,
     imagen:  '../assets/img/curso1.jpg',
     estrellas: '../assets/img/estrellas.png'
@@ -14,8 +15,9 @@ export const CURSOS_DATA: Curso[] =
   {
     id: "2",
     titulo: "Curso de Comida Vegetariana",
-    instructor: 'José Guzman',
+    web: 'José Guzman',
     precio: 200,
+    comprado: false,
     cantidad: 0,
     imagen:  '../assets/img/curso2.jpg',
     estrellas: '../assets/img/estrellas.png'
@@ -23,8 +25,9 @@ export const CURSOS_DATA: Curso[] =
   {
     id: "3",
     titulo: "Guitarra para Principiantes",
-    instructor: 'Rodrigo Martínez',
+    web: 'Rodrigo Martínez',
     precio: 220,
+    comprado: false,
     cantidad: 0,
     imagen:  '../assets/img/curso3.jpg',
     estrellas: '../assets/img/estrellas.png'
@@ -32,8 +35,9 @@ export const CURSOS_DATA: Curso[] =
   {
     id: "4",
     titulo: "HTML5, CSS3, JavaScript para Principiantes",
-    instructor: 'Juan Pedro',
+    web: 'Juan Pedro',
     precio: 125,
+    comprado: false,
     cantidad: 0,
     imagen:  '../assets/img/curso1.jpg',
     estrellas: '../assets/img/estrellas.png'
@@ -41,8 +45,9 @@ export const CURSOS_DATA: Curso[] =
   {
     id: "5",
     titulo: "Curso de Comida Vegetariana",
-    instructor: 'José Guzman',
+    web: 'José Guzman',
     precio: 200,
+    comprado: false,
     cantidad: 0,
     imagen:  '../assets/img/curso2.jpg',
     estrellas: '../assets/img/estrellas.png'
@@ -50,8 +55,9 @@ export const CURSOS_DATA: Curso[] =
   {
     id: "6",
     titulo: "Guitarra para Principiantes",
-    instructor: 'Rodrigo Martínez',
+    web: 'Rodrigo Martínez',
     precio: 220,
+    comprado: false,
     cantidad: 0,
     imagen:  '../assets/img/curso3.jpg',
     estrellas: '../assets/img/estrellas.png'

@@ -1,7 +1,8 @@
 #hero {
-  background-image:url(../../assets/img/hero.jpg);
-  height: 350px;
+  background-image:url(../../assets/img/banner.jpg);
+  height: 500px;
   background-size: cover;
+  background-position: 100%;
 }
 
 .contenido-hero {

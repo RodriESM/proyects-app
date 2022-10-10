@@ -13,7 +13,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { BarraComponent } from './barra/barra.component';
-import { CursosComponent } from './cursos/cursos.component';
+import { CursosComponent } from './cursos/whises.component';
 import { CardComponent } from './cursos/card/card.component';
 
 @NgModule({
@@ -31,7 +31,7 @@ import { CardComponent } from './cursos/card/card.component';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

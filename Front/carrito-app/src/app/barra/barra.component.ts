@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Whis } from '../cursos/whis';
+import { WHISES_DATA } from '../cursos/whises.json';
 
 @Component({
   selector: 'app-barra',
@@ -7,15 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarraComponent implements OnInit {
 
-  private nCursos: Number = 20000;
+  private nWhises: Number = 0;
+
+  public whises: Whis[] = [];
 
   constructor() { }
 
+
+
   ngOnInit(): void {
+    this.nWhises = WHISES_DATA.length
   }
 
   public getCursos(): string{
-    return this.nCursos.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    return this.nWhises.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   }
 
 }
