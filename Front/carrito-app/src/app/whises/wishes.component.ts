@@ -1,11 +1,11 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { Whis } from './whis';
-import { WHISES_DATA } from './whises.json';
+import { Whis } from './wish';
+import { WHISES_DATA } from './wishes.json';
 
 @Component({
   selector: 'app-cursos',
-  templateUrl: './whises.component.html',
-  styleUrls: ['./whises.component.css']
+  templateUrl: './wishes.component.html',
+  styleUrls: ['./wishes.component.css']
 })
 export class CursosComponent implements OnInit {
 

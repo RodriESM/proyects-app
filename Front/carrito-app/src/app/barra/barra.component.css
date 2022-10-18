@@ -12,6 +12,10 @@
   color: white;
 }
 
+div .row{
+  height: 40px;
+}
+
 .icono {
   background-repeat: no-repeat;
   background-position: left center;

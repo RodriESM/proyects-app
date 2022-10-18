@@ -12,8 +12,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { BarraComponent } from './barra/barra.component';
-import { CursosComponent } from './cursos/whises.component';
-import { CardComponent } from './cursos/card/card.component';
+import { CursosComponent } from './whises/wishes.component';
+import { CardComponent } from './whises/card/card.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 

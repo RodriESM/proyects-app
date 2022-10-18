@@ -1,5 +1,5 @@
 import { Component, Inject, Input, OnInit, Output } from '@angular/core';
-import { Whis } from '../whis';
+import { Whis } from '../wish';
 
 @Component({
   selector: 'app-card',

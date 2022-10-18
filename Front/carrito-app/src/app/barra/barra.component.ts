@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Whis } from '../cursos/whis';
-import { WHISES_DATA } from '../cursos/whises.json';
+import { Whis } from '../whises/wish';
+import { WHISES_DATA } from '../whises/wishes.json';
 
 @Component({
   selector: 'app-barra',
@@ -21,7 +21,7 @@ export class BarraComponent implements OnInit {
     this.nWhises = WHISES_DATA.length
   }
 
-  public getCursos(): string{
+  public getWhises(): string{
     return this.nWhises.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   }
 
