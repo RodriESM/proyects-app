@@ -4,7 +4,7 @@ export const WHISES_DATA: Whis[] =
 [
   {
     id: "1",
-    titulo: "HTML5, CSS3, JavaScript para Principiantes",
+    titulo: "Sintetizador de guitarra",
     web: 'Juan Pedro',
     precio: 125,
     comprado: false,

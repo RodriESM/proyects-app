@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   public aprender: string = "¿Quieres cumplir algún deseo?";
-  public precio: string = "Todos deseos te esperan";
+  public quote: string = "Todos deseos te esperan";
   public placeHolderValue: string = "¿Qué te gustaría comprar?";
 
   constructor() { }
