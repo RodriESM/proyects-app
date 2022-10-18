@@ -1,13 +1,11 @@
-  <div class="four columns">
-      <div class="card my-2 mx-1">
-          <img src={{whis.imagen}} class="imagen-curso u-full-width">
-          <div class="info-card">
-              <h4>{{whis.titulo}}</h4>
-              <a><p>{{whis.web}}</p></a>
-              <img src={{whis.estrellas}}>
-              <p *ngIf="whis.comprado == true" class="precio comprado">Comprado<span class="u-pull-right ">{{whis.precio}}€  </span></p>
-              <p class="precio">No comprado  <span class="u-pull-right ">{{whis.precio}}€  </span></p>
-              <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar al carrito</a>
-          </div>
-      </div> <!--.card-->
+<div class="card">
+    <img src={{whis.imagen}} class="card-img-top">
+    <div class="card-body">
+        <a class="card-title" href={{whis.web}}><h4>{{whis.titulo}}</h4></a>
+        <p class="card-text">{{whis.description}}</p>
+        <img src={{whis.estrellas}}>
+        <p *ngIf="whis.comprado == true" class="precio comprado">Comprado<span class="u-pull-right ">{{whis.precio}}€  </span></p>
+        <p class="precio">No comprado  <span class="u-pull-right ">{{whis.precio}}€  </span></p>
+        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar al carrito</a>
   </div>
+</div> <!--.card-->
