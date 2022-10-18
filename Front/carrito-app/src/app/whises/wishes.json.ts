@@ -6,7 +6,7 @@ export const WHISES_DATA: Whis[] =
     id: "1",
     titulo: "Focusrite Scarlett 2i2 3rd Gen",
     description: "Interfaz de audio USB 2.0 de 2 canales con conexión USB-C",
-    web: 'https://www.thomann.de/es/focusrite_scarlett_2i2_3rd_gen.htm#bewertung',
+    web: 'https://www.thomann.de/es/focusrite_scarlett_2i2_3rd_gen.htm',
     precio: 125,
     comprado: false,
     cantidad: 0,
