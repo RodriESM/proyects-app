@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Whis } from '../cursos/whis';
-import { WHISES_DATA } from '../cursos/whises.json';
+import { Whis } from '../whises/whis';
+import { WHISES_DATA } from '../whises/whises.json';
 
 @Component({
   selector: 'app-barra',
