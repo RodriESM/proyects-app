@@ -12,25 +12,25 @@
       text-align: left;
   }
 }
-.info-card  {
+.card-body {
   padding: 10px 20px;
 }
 
-.info-card p,
+.card-body p,
 .card h4 {
   margin-bottom: 5px;
 }
-.info-card .precio {
+.card-body.precio {
   font-size: 18px;
   margin-top: 10px;
 }
 
-.info-card .precio .comprado {
+.card-body .precio .comprado {
   text-decoration: line-through;
   font-size: 18px;
   margin-top: 10px;
 }
-.info-card .precio span {
+.card-body .precio span {
   font-weight: 700;
   font-size: 22px;
 }

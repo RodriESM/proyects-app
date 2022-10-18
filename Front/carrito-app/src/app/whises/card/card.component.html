@@ -1,11 +1,12 @@
-<div class="card">
+ <!--.card-->
+<div class="card h-100">
     <img src={{whis.imagen}} class="card-img-top">
     <div class="card-body">
-        <a class="card-title" href={{whis.web}}><h4>{{whis.titulo}}</h4></a>
+        <h4 class="card-title"><a  href={{whis.web}}>{{whis.titulo}}</a></h4>
         <p class="card-text">{{whis.description}}</p>
         <img src={{whis.estrellas}}>
         <p *ngIf="whis.comprado == true" class="precio comprado">Comprado<span class="u-pull-right ">{{whis.precio}}€  </span></p>
         <p class="precio">No comprado  <span class="u-pull-right ">{{whis.precio}}€  </span></p>
         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar al carrito</a>
-  </div>
-</div> <!--.card-->
+    </div>
+</div>
