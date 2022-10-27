@@ -1,3 +1,4 @@
+import { CarritoService } from './../carrito.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,8 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavComponent implements OnInit {
 
   public img: string = '/assets/img/logo.jpg';
-
-  constructor() { }
+  constructor(public carritoService: CarritoService) { }
 
   ngOnInit(): void {
   }

@@ -8,7 +8,7 @@
               <mat-icon style="color: lightgrey;">shopping_cart</mat-icon>
             </a>
             <div id="carrito">
-                    <table id="lista-carrito" class="u-full-width">
+                    <table class="u-full-width">
                         <thead>
                             <tr>
                                 <th>Imagen</th>
@@ -18,11 +18,21 @@
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody></tbody>
+                        <tbody *ngFor="let whis of carritoService.articulosCarrito" id="lista-carrito" >
+                          <td>
+                            <img [src]="whis.imagen" width="100">
+                          </td>
+                          <td>{{whis.titulo}}</td>
+                          <td>{{whis.precio}}</td>
+                          <td>{{whis.cantidad}}</td>
+                          <td>
+                              <a href="#" class="borrar-curso" (click)="carritoService.eliminarDelCarrito(whis)"> X </a>
+                          </td>
+                        </tbody>
                     </table>
 
-                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
-                    <p id="precio-total" ><b>Total:</b> </p>
+                    <a href="#" id="vaciar-carrito" (click)="carritoService.vaciarCarrito()" class="button u-full-width">Vaciar Carrito</a>
+                    <p id="precio-total" ><b>Total:</b> {{carritoService.total}}€ </p>
             </div>
          </li>
       </ul>

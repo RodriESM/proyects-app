@@ -3,9 +3,9 @@ export class Whis {
   public titulo: string = '';
   public description: string = '';
   public web: string = '';
-  public precio: Number = 0;
-  public comprado: Boolean = false;
-  public cantidad: Number = 0;
+  public precio: number = 0;
+  public comprado: boolean = false;
+  public cantidad: number = 0;
   public imagen:string = '';
   public estrellas: string = '';
 }

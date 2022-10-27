@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Whis } from './wish';
 import { WHISES_DATA } from './wishes.json';
 

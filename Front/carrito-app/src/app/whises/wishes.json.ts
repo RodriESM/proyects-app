@@ -9,7 +9,7 @@ export const WHISES_DATA: Whis[] =
     web: 'https://www.thomann.de/es/focusrite_scarlett_2i2_3rd_gen.htm',
     precio: 125,
     comprado: false,
-    cantidad: 0,
+    cantidad: 1,
     imagen:  'https://thumbs.static-thomann.de/thumb/bdbmagic/pics/bdb/467950/14226632_800.jpg',
     estrellas: '../assets/img/estrellas.png'
   },
@@ -20,7 +20,7 @@ export const WHISES_DATA: Whis[] =
     web: 'José Guzman',
     precio: 200,
     comprado: false,
-    cantidad: 0,
+    cantidad: 1,
     imagen:  '../assets/img/curso2.jpg',
     estrellas: '../assets/img/estrellas.png'
   },
@@ -31,7 +31,7 @@ export const WHISES_DATA: Whis[] =
     web: 'Rodrigo Martínez',
     precio: 220,
     comprado: false,
-    cantidad: 0,
+    cantidad: 1,
     imagen:  '../assets/img/curso3.jpg',
     estrellas: '../assets/img/estrellas.png'
   },
@@ -42,7 +42,7 @@ export const WHISES_DATA: Whis[] =
     web: 'Juan Pedro',
     precio: 125,
     comprado: false,
-    cantidad: 0,
+    cantidad: 1,
     imagen:  '../assets/img/curso1.jpg',
     estrellas: '../assets/img/estrellas.png'
   },
@@ -53,7 +53,7 @@ export const WHISES_DATA: Whis[] =
     web: 'José Guzman',
     precio: 200,
     comprado: false,
-    cantidad: 0,
+    cantidad: 1,
     imagen:  '../assets/img/curso2.jpg',
     estrellas: '../assets/img/estrellas.png'
   },
@@ -64,7 +64,7 @@ export const WHISES_DATA: Whis[] =
     web: 'Rodrigo Martínez',
     precio: 220,
     comprado: false,
-    cantidad: 0,
+    cantidad: 1,
     imagen:  '../assets/img/curso3.jpg',
     estrellas: '../assets/img/estrellas.png'
   }

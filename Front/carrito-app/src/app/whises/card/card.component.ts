@@ -1,4 +1,5 @@
-import { Component, Inject, Input, OnInit, Output } from '@angular/core';
+import { CarritoService } from './../../carrito.service';
+import { Component, Input, OnInit } from '@angular/core';
 import { Whis } from '../wish';
 
 @Component({
@@ -8,9 +9,9 @@ import { Whis } from '../wish';
 })
 export class CardComponent implements OnInit {
 
-  @Input() whis: Whis = new Whis;
+  @Input() whis: Whis = new Whis();
 
-  constructor() { }
+  constructor(public carritoService:CarritoService) { }
 
   ngOnInit(): void {
   }
