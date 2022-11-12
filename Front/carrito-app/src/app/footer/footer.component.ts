@@ -1,4 +1,7 @@
+import { ItemService } from './../service/item.service';
 import { Component, OnInit } from '@angular/core';
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-footer',
@@ -8,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   public autor: String = "Rodrigo Martínez Le Pera";
+  public faCirclePlus: any = faCirclePlus;
+  private itemService: ItemService = new ItemService();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public addNewWhis(): void{
+    this.itemService.addNewWhis();
   }
 }

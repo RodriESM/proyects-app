@@ -27,6 +27,7 @@
 
 .card-body .precio .comprado {
   text-decoration: line-through;
+  color: greenyellow;
   font-size: 18px;
   margin-top: 10px;
 }

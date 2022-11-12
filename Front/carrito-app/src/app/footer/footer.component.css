@@ -2,6 +2,7 @@
   margin-top: 40px;
   border-top:1px solid #aaa;;
   padding-top: 40px;
+  margin-bottom: 0px;
 }
 .footer .menu a{
 display: block;
@@ -11,4 +12,37 @@ text-decoration: none;
 
 .four a{
   color: white;
+}
+
+.author{
+  margin-bottom: 0.45px;
+}
+
+/*Bonton de subir*/
+.divStickyB {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  bottom: 0;
+}
+
+.botnav {
+  list-style-type: none;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  background-color: rgb(67, 179, 223);
+  box-shadow: 5px 5px 5px black;
+  float: right;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 200px;
+}
+
+.botnav a{
+color: white;
+text-decoration-color: white;
 }
