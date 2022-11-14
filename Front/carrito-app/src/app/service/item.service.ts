@@ -13,7 +13,7 @@ export class ItemService {
   public addNewWhis(): void {
     Swal.fire({
       title: 'Add your new desire to the list',
-      width: '15%',
+      width: '18%',
       html: `
       <div class="mb-2">
       <label for="textTittle" class="form-label">Tittle</label>
@@ -21,7 +21,7 @@ export class ItemService {
       </div>
       <div class="mb-2">
       <label for="textDescription" class="form-label">Description</label>
-      <input type="textarea" id="textDescription" class="form-control" placeholder="Whis description...">
+      <textarea minlength="20" maxlength="50" class="form-control" id="textDescription"></textarea>
       </div>
       <div class="mb-2">
       <label for="uri" class="form-label">URI</label>
@@ -42,17 +42,28 @@ export class ItemService {
         //TODO Add other values here...
         const tittle = (<HTMLInputElement>Swal!.getPopup()!.querySelector('#textTittle')!).value
         const description = (<HTMLInputElement>Swal!.getPopup()!.querySelector('#textDescription')!).value
+        const uri = (<HTMLInputElement>Swal!.getPopup()!.querySelector('#uri')!).value
+        const img = (<HTMLInputElement>Swal!.getPopup()!.querySelector('#img')!).value
         if (!tittle || !description) {
           Swal.showValidationMessage(`Please enter tittle and description`)
         }
-        return { tittle: tittle, description: description }
+        return { tittle: tittle, description: description, uri: uri, img: img }
       }
     }).then((result: any) => {
-        //TODO Add new item to the list...
-      Swal.fire(`
-        Tittle: ${result.value.tittle}
-        Description: ${result.value.description}
-      `.trim())
+      if (result.isConfirmed) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          showConfirmButton: false,
+          timer: 10000,
+          title: `<a href="${result.value.uri}" target="_blank">${result.value.tittle}</a>`,
+          text: result.value.description,
+          imageUrl: result.value.img,
+          imageWidth: '100%',
+          imageHeight: 200,
+          imageAlt: result.value.tittle,
+        })
+      }
     })
   }
 }
