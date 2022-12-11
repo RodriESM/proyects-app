@@ -1,14 +1,20 @@
+import { Observable, BehaviorSubject } from 'rxjs';
+import { Whis } from './../whises/wish';
 import { Injectable } from '@angular/core';
 import Swal from 'sweetalert2';
+import { WHISES_DATA } from '../whises/wishes.json';
+import { v4 as uuid } from 'uuid';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemService {
 
-  public values: any;
+  public _whises: BehaviorSubject<Whis[]>
 
-  constructor() { }
+  constructor() {
+    this._whises = new BehaviorSubject<Whis[]>([]);
+  }
 
   public addNewWhis(): void {
     Swal.fire({
@@ -22,6 +28,10 @@ export class ItemService {
       <div class="mb-2">
       <label for="textDescription" class="form-label">Description</label>
       <textarea minlength="20" maxlength="50" class="form-control" id="textDescription"></textarea>
+      </div>
+      <div class="mb-2">
+      <label for="textPrecio" class="form-label">Precio</label>
+      <input type="number" id="textPrecio" class="form-control" placeholder="Whis price...">
       </div>
       <div class="mb-2">
       <label for="uri" class="form-label">URI</label>
@@ -40,13 +50,24 @@ export class ItemService {
       focusConfirm: false,
       preConfirm: () => {
         //TODO Add other values here...
-        const tittle = (<HTMLInputElement>Swal!.getPopup()!.querySelector('#textTittle')!).value
-        const description = (<HTMLInputElement>Swal!.getPopup()!.querySelector('#textDescription')!).value
-        const uri = (<HTMLInputElement>Swal!.getPopup()!.querySelector('#uri')!).value
-        const img = (<HTMLInputElement>Swal!.getPopup()!.querySelector('#img')!).value
-        if (!tittle || !description) {
-          Swal.showValidationMessage(`Please enter tittle and description`)
+        const tittle = (<HTMLInputElement>Swal!.getPopup()!.querySelector('#textTittle')!).value || ""
+        const description = (<HTMLInputElement>Swal!.getPopup()!.querySelector('#textDescription')!).value || ""
+        const precio = Number.parseFloat((<HTMLInputElement>Swal!.getPopup()!.querySelector('#textPrecio')!).value) || 0;
+        const uri = (<HTMLInputElement>Swal!.getPopup()!.querySelector('#uri')!).value || ""
+        const img = (<HTMLInputElement>Swal!.getPopup()!.querySelector('#img')!).value  || ""
+        if (!tittle ) {
+          Swal.showValidationMessage(`Please enter tittle`);
+          return;
         }
+        if (!description) {
+          Swal.showValidationMessage(`Please enter description`);
+          return;
+        }
+        if (!precio) {
+          Swal.showValidationMessage(`Please enter a price`);
+          return;
+        }
+        this.createWhis(tittle, description, precio, uri, img);
         return { tittle: tittle, description: description, uri: uri, img: img }
       }
     }).then((result: any) => {
@@ -62,8 +83,28 @@ export class ItemService {
           imageWidth: '100%',
           imageHeight: 200,
           imageAlt: result.value.tittle,
+        }).then(() => {
+          this._whises.next([...JSON.parse(localStorage.getItem('whises')!)]);
+          localStorage.setItem('whises', JSON.stringify(this._whises.value));
         })
       }
-    })
+    });
+  }
+
+  private createWhis(tittle: string, description: string, precio: number, uri: string, img: string ): void {
+    let acceptedWhis: Whis = {
+      id: uuid(),
+      titulo: tittle,
+      description: description,
+      web: uri,
+      precio: precio,
+      comprado: false,
+      cantidad: 0,
+      imagen: img,
+      estrellas: '../assets/img/estrellas.png'
+    }
+    this._whises.subscribe(elemnts => {
+      elemnts.push(acceptedWhis);
+    });
   }
 }

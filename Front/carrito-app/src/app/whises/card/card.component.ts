@@ -1,5 +1,5 @@
 import { CarritoService } from '../../service/carrito.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Whis } from '../wish';
 
 @Component({
@@ -11,7 +11,7 @@ export class CardComponent implements OnInit {
 
   @Input() whis: Whis = new Whis();
 
-  constructor(public carritoService:CarritoService) { }
+  constructor(public carritoService: CarritoService) { }
 
   ngOnInit(): void {
   }

@@ -12,9 +12,8 @@ export class FooterComponent implements OnInit {
 
   public autor: String = "Rodrigo Martínez Le Pera";
   public faCirclePlus: any = faCirclePlus;
-  private itemService: ItemService = new ItemService();
 
-  constructor() { }
+  constructor(private itemService: ItemService) { }
 
   ngOnInit(): void {
   }
