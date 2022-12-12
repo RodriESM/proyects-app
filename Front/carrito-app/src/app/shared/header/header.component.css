@@ -1,5 +1,5 @@
 #hero {
-  background-image:url(../../assets/img/banner.jpg);
+  background-image:url(../../../assets/img/banner.jpg);
   height: 500px;
   background-size: cover;
   background-position: 100%;
@@ -26,7 +26,7 @@
   display: block;
   text-indent: -9999px;
   width: 50px;
-  background-image: url(../../assets/img/lupa.png);
+  background-image: url(../../../assets/img/lupa.png);
   background-position: right center;
   background-repeat: no-repeat;
   border:none;
