@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Whis } from 'src/app/interfaces/wish';
-import { WHISES_DATA } from 'src/app/pages/whises/wishes.json';
+import { WHISES_DATA } from 'src/assets/data/wishes.json';
 
 @Component({
-  selector: 'app-barra',
-  templateUrl: './barra.component.html',
-  styleUrls: ['./barra.component.css']
+  selector: 'app-bar',
+  templateUrl: './bar.component.html',
+  styleUrls: ['./bar.component.css']
 })
-export class BarraComponent implements OnInit {
+export class BarComponent implements OnInit {
 
   private nWhises: Number = 0;
 

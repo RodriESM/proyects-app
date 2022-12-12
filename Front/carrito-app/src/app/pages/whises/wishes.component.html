@@ -1,6 +1,6 @@
 <h1 id="encabezado" class="encabezado"><b>Lista de deseos</b></h1>
 <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col" *ngFor="let whis of whises | paginate: {
+  <div class="col" *ngFor="let whis of _whises | paginate: {
       itemsPerPage: tableSize,
       currentPage: page,
       totalItems: count

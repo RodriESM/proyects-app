@@ -12,7 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from "@angular/common/http";
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
-import { BarraComponent } from './shared/barra/barra.component';
+import { BarComponent } from './shared/bar/bar.component';
 import { PaginationComponent } from './shared/pagination/pagination.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -24,10 +24,10 @@ import { WhisesComponent } from './pages/whises/wishes.component';
     NavComponent,
     FooterComponent,
     HeaderComponent,
-    BarraComponent,
+    BarComponent,
     PaginationComponent,
     CardComponent,
-    WhisesComponent
+    WhisesComponent,
   ],
   imports: [
     BrowserModule,

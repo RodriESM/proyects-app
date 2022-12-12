@@ -3,16 +3,25 @@ import { Injectable } from '@angular/core';
 import Swal from 'sweetalert2';
 import { v4 as uuid } from 'uuid';
 import { Whis } from '../interfaces/wish';
+import { WHISES_DATA } from 'src/assets/data/wishes.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemService {
 
-  public _whises: BehaviorSubject<Whis[]>
+  public $whises: BehaviorSubject<Whis[]>;
+  public _whises: Whis[];
 
   constructor() {
-    this._whises = new BehaviorSubject<Whis[]>([]);
+    this.$whises = new BehaviorSubject<Whis[]>(WHISES_DATA);
+    if(!localStorage.getItem('whises')){
+      localStorage.setItem('whises', JSON.stringify(WHISES_DATA));
+      this._whises = WHISES_DATA;
+    }else{
+      this.$whises.next([...JSON.parse(localStorage.getItem('whises')!)] || []);
+      this._whises = JSON.parse(localStorage.getItem('whises')!);
+    }
   }
 
   public addNewWhis(): void {
@@ -21,24 +30,24 @@ export class ItemService {
       width: '18%',
       html: `
       <div class="mb-2">
-      <label for="textTittle" class="form-label">Tittle</label>
-      <input type="text" id="textTittle" class="form-control" placeholder="Whis tittle...">
+      <label for="textTittle" class="form-label">Título</label>
+      <input type="text" id="textTittle" class="form-control" placeholder="Mi coche deseado...">
       </div>
       <div class="mb-2">
-      <label for="textDescription" class="form-label">Description</label>
-      <textarea minlength="20" maxlength="50" class="form-control" id="textDescription"></textarea>
+      <label for="textDescription" class="form-label">Descripción</label>
+      <textarea minlength="20" maxlength="50" class="form-control" id="textDescription" placeholder="Es de color negro..."></textarea>
       </div>
       <div class="mb-2">
       <label for="textPrecio" class="form-label">Precio</label>
-      <input type="number" id="textPrecio" class="form-control" placeholder="Whis price...">
+      <input type="number" id="textPrecio" class="form-control" placeholder="25000...">
       </div>
       <div class="mb-2">
       <label for="uri" class="form-label">URI</label>
-      <input type="url" id="uri" class="form-control" placeholder="Whis URI...">
+      <input type="url" id="uri" class="form-control" placeholder="Dirección URL...">
       </div>
       <div class="mb-2">
-      <label for="img" class="form-label">Image</label>
-      <input type="url" id="img" class="form-control" placeholder="Whis img source...">
+      <label for="img" class="form-label">Imagen</label>
+      <input type="url" id="img" class="form-control" placeholder="Origen de la imagen...">
       </div>
       `,
       confirmButtonText: 'Add',
@@ -83,8 +92,8 @@ export class ItemService {
           imageHeight: 200,
           imageAlt: result.value.tittle,
         }).then(() => {
-          this._whises.next([...JSON.parse(localStorage.getItem('whises')!)]);
-          localStorage.setItem('whises', JSON.stringify(this._whises.value));
+          this.$whises.next(this._whises);
+          localStorage.setItem('whises', JSON.stringify(this._whises));
         })
       }
     });
@@ -102,8 +111,6 @@ export class ItemService {
       imagen: img,
       estrellas: '../assets/img/estrellas.png'
     }
-    this._whises.subscribe(elemnts => {
-      elemnts.push(acceptedWhis);
-    });
+    this._whises.push(acceptedWhis);
   }
 }

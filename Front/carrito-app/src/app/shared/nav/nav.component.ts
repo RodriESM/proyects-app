@@ -1,4 +1,5 @@
-import { CarritoService } from '../../services/carrito.service';
+import { Whis } from 'src/app/interfaces/wish';
+import { CarService } from '../../services/car.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,10 +10,25 @@ import { Component, OnInit } from '@angular/core';
 export class NavComponent implements OnInit {
 
   public img: string = '/assets/img/logo.jpg';
-  constructor(public carritoService: CarritoService) { }
+  public total: number = 0;
+
+  constructor(private carService: CarService) { }
 
   ngOnInit(): void {
-
+    this.carService.getTotal().subscribe(total => {
+      this.total = total;
+    })
   }
 
+  getItems(): Whis[]{
+    return this.carService.getItems();
+  }
+
+  delete(whis: Whis): void{
+    this.carService.delete(whis);
+  }
+
+  clean(): void{
+    this.carService.cleanCar();
+  }
 }

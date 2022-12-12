@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { Whis } from 'src/app/interfaces/wish';
-import { CarritoService } from 'src/app/services/carrito.service';
+import { CarService } from 'src/app/services/car.service';
 
 
 @Component({
@@ -12,7 +12,7 @@ export class CardComponent implements OnInit {
 
   @Input() whis: Whis = new Whis();
 
-  constructor(public carritoService: CarritoService) { }
+  constructor(public carService: CarService) { }
 
   ngOnInit(): void {
   }

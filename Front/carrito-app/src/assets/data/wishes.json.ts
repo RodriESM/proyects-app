@@ -1,9 +1,10 @@
 import { Whis } from "src/app/interfaces/wish";
+import { v4 as uuid } from 'uuid';
 
 export const WHISES_DATA: Whis[] =
 [
   {
-    id: "1",
+    id: uuid(),
     titulo: "Focusrite Scarlett 2i2 3rd Gen",
     description: "Interfaz de audio USB 2.0 de 2 canales con conexión USB-C",
     web: 'https://www.thomann.de/es/focusrite_scarlett_2i2_3rd_gen.htm',
@@ -14,7 +15,7 @@ export const WHISES_DATA: Whis[] =
     estrellas: '../assets/img/estrellas.png'
   },
   {
-    id: "2",
+    id: uuid(),
     titulo: "Curso de Comida Vegetariana",
     description: "Description",
     web: 'José Guzman',
@@ -25,7 +26,7 @@ export const WHISES_DATA: Whis[] =
     estrellas: '../assets/img/estrellas.png'
   },
   {
-    id: "3",
+    id: uuid(),
     titulo: "Guitarra para Principiantes",
     description: "Description",
     web: 'Rodrigo Martínez',
@@ -36,7 +37,7 @@ export const WHISES_DATA: Whis[] =
     estrellas: '../assets/img/estrellas.png'
   },
   {
-    id: "4",
+    id: uuid(),
     titulo: "HTML5, CSS3, JavaScript para Principiantes",
     description: "Description",
     web: 'Juan Pedro',
@@ -47,7 +48,7 @@ export const WHISES_DATA: Whis[] =
     estrellas: '../assets/img/estrellas.png'
   },
   {
-    id: "5",
+    id: uuid(),
     titulo: "Curso de Comida Vegetariana",
     description: "Description",
     web: 'José Guzman',
@@ -58,7 +59,7 @@ export const WHISES_DATA: Whis[] =
     estrellas: '../assets/img/estrellas.png'
   },
   {
-    id: "6",
+    id: uuid(),
     titulo: "Guitarra para Principiantes",
     description: "Description",
     web: 'Rodrigo Martínez',

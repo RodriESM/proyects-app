@@ -9,6 +9,6 @@
         <ng-template #elseBlock>
         <p  class="precio">No comprado  <span class="u-pull-right ">{{whis.precio}}€  </span></p>
         </ng-template>
-        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1" (click)="carritoService.agregarAlCarrito(whis)">Agregar al carrito</a>
+        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1" (click)="carService.addItem(whis)">Agregar al carrito</a>
     </div>
 </div>

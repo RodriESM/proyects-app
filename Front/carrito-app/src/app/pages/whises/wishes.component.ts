@@ -1,6 +1,6 @@
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { Component } from '@angular/core';
-import { WHISES_DATA } from './wishes.json';
+import { WHISES_DATA } from '../../../assets/data/wishes.json';
 import { Whis } from 'src/app/interfaces/wish';
 import { ItemService } from 'src/app/services/item.service';
 
@@ -11,7 +11,7 @@ import { ItemService } from 'src/app/services/item.service';
 })
 export class WhisesComponent{
 
-  public whises: Whis[] = [];
+  public _whises: Whis[] = [];
 
   public page: number = 1;
   public count: number = 0;
@@ -28,15 +28,8 @@ export class WhisesComponent{
     //Add 'implements OnInit' to the class.
     this._isMultiplo.subscribe();
 
-    if(!localStorage.getItem('whises')){
-      localStorage.setItem('whises', JSON.stringify(WHISES_DATA));
-      this.itemService._whises.next([...WHISES_DATA]);
-    }else{
-      this.itemService._whises.next([...JSON.parse(localStorage.getItem('whises')!)] || []);
-    }
-
-    this.itemService._whises.subscribe(whises => {
-      this.whises = whises;
+    this.itemService.$whises.subscribe(whises => {
+      this._whises = [...whises];
     });
    }
 
