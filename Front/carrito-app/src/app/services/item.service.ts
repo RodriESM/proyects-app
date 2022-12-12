@@ -1,9 +1,8 @@
-import { Observable, BehaviorSubject } from 'rxjs';
-import { Whis } from './../whises/wish';
+import {  BehaviorSubject } from 'rxjs';
 import { Injectable } from '@angular/core';
 import Swal from 'sweetalert2';
-import { WHISES_DATA } from '../whises/wishes.json';
 import { v4 as uuid } from 'uuid';
+import { Whis } from '../interfaces/wish';
 
 @Injectable({
   providedIn: 'root'

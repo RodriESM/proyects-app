@@ -1,16 +1,15 @@
 import { BehaviorSubject, Observable, of } from 'rxjs';
-import { ItemService } from './../service/item.service';
-import { Component, OnInit } from '@angular/core';
-import { Whis } from './wish';
+import { Component } from '@angular/core';
 import { WHISES_DATA } from './wishes.json';
-import { faL } from '@fortawesome/free-solid-svg-icons';
+import { Whis } from 'src/app/interfaces/wish';
+import { ItemService } from 'src/app/services/item.service';
 
 @Component({
   selector: 'app-whises',
   templateUrl: './wishes.component.html',
   styleUrls: ['./wishes.component.css']
 })
-export class CursosComponent{
+export class WhisesComponent{
 
   public whises: Whis[] = [];
 

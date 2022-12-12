@@ -1,6 +1,7 @@
-import { CarritoService } from '../../service/carrito.service';
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { Whis } from '../wish';
+import { Whis } from 'src/app/interfaces/wish';
+import { CarritoService } from 'src/app/services/carrito.service';
+
 
 @Component({
   selector: 'app-card',

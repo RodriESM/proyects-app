@@ -1,4 +1,4 @@
-import { CarritoService } from '../service/carrito.service';
+import { CarritoService } from '../../services/carrito.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

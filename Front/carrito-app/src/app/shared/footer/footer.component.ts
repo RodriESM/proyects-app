@@ -1,4 +1,4 @@
-import { ItemService } from './../service/item.service';
+import { ItemService } from '../../services/item.service';
 import { Component, OnInit } from '@angular/core';
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';

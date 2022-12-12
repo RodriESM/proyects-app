@@ -1,4 +1,4 @@
-import { Whis } from "./wish";
+import { Whis } from "src/app/interfaces/wish";
 
 export const WHISES_DATA: Whis[] =
 [

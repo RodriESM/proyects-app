@@ -1,5 +1,5 @@
-import { Whis } from '../whises/wish';
 import { Injectable } from '@angular/core';
+import { Whis } from '../interfaces/wish';
 
 @Injectable({
   providedIn: 'root'
