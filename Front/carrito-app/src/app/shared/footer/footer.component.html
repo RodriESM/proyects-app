@@ -1,5 +1,14 @@
+<!--Botón de subir-->
+<div class="divStickyB">
+  <div class="botnav">
+    <a href="#header" (click)=addNewWhis()>
+      <fa-icon [icon]="faCirclePlus" [styles]="{'height': '102%', 'color': 'black'}"></fa-icon>
+    </a>
+  </div>
+</div>
 <footer class="footer bg-dark text-center">
-  <div class="containter py-2 px-3">
+<!-- Footer -->
+  <div class="containter px-3">
     <div class="row">
       <div class="four columns" >
           <nav id="principal " class="menu">
@@ -19,7 +28,7 @@
       </div>
     </div>
   </div>
-  <p class="text-white my-1">
+  <p class="text-white author">
     &copy; {{autor}}
   </p>
 </footer>

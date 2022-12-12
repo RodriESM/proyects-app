@@ -5,8 +5,10 @@
       <h4 class="card-title"><a href={{whis.web}} target="_blank">{{whis.titulo}}</a></h4>
         <p class="card-text">{{whis.description}}</p>
         <img [src]=whis.estrellas>
-        <p *ngIf="whis.comprado == true" class="precio comprado">Comprado<span class="u-pull-right ">{{whis.precio}}€  </span></p>
-        <p class="precio">No comprado  <span class="u-pull-right ">{{whis.precio}}€  </span></p>
+        <p *ngIf="whis.comprado else elseBlock" class="precio comprado">Comprado<span class="u-pull-right ">{{whis.precio}}€ </span></p>
+        <ng-template #elseBlock>
+        <p  class="precio">No comprado  <span class="u-pull-right ">{{whis.precio}}€  </span></p>
+        </ng-template>
         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1" (click)="carritoService.agregarAlCarrito(whis)">Agregar al carrito</a>
     </div>
 </div>

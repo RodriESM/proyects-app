@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Whis } from '../whises/wish';
-import { WHISES_DATA } from '../whises/wishes.json';
+import { Whis } from 'src/app/interfaces/wish';
+import { WHISES_DATA } from 'src/app/pages/whises/wishes.json';
 
 @Component({
   selector: 'app-barra',

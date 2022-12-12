@@ -1,21 +1,22 @@
+import { CardComponent } from './pages/whises/card/card.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
+import { NavComponent } from './shared/nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatIconModule } from '@angular/material/icon';
 
 import { HttpClientModule } from "@angular/common/http";
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
-import { BarraComponent } from './barra/barra.component';
-import { CursosComponent } from './whises/wishes.component';
-import { CardComponent } from './whises/card/card.component';
-import { PaginationComponent } from './pagination/pagination.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { BarraComponent } from './shared/barra/barra.component';
+import { PaginationComponent } from './shared/pagination/pagination.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { WhisesComponent } from './pages/whises/wishes.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     FooterComponent,
     HeaderComponent,
     BarraComponent,
-    CursosComponent,
-    CardComponent,
     PaginationComponent,
+    CardComponent,
+    WhisesComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +35,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

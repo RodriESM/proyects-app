@@ -1,4 +1,4 @@
-import { Whis } from "./wish";
+import { Whis } from "src/app/interfaces/wish";
 
 export const WHISES_DATA: Whis[] =
 [
@@ -7,8 +7,8 @@ export const WHISES_DATA: Whis[] =
     titulo: "Focusrite Scarlett 2i2 3rd Gen",
     description: "Interfaz de audio USB 2.0 de 2 canales con conexión USB-C",
     web: 'https://www.thomann.de/es/focusrite_scarlett_2i2_3rd_gen.htm',
-    precio: 125,
-    comprado: false,
+    precio: 158,
+    comprado: true,
     cantidad: 1,
     imagen:  'https://thumbs.static-thomann.de/thumb/bdbmagic/pics/bdb/467950/14226632_800.jpg',
     estrellas: '../assets/img/estrellas.png'

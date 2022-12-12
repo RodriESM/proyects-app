@@ -1,4 +1,4 @@
-import { CarritoService } from './../carrito.service';
+import { CarritoService } from '../../services/carrito.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,6 +12,7 @@ export class NavComponent implements OnInit {
   constructor(public carritoService: CarritoService) { }
 
   ngOnInit(): void {
+
   }
 
 }
