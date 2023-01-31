@@ -1,6 +1,6 @@
-import { ItemService } from '../../services/item.service';
 import { Component, OnInit } from '@angular/core';
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
+import { ItemService } from 'src/app/items/services/item.service';
 import Swal from 'sweetalert2';
 
 @Component({

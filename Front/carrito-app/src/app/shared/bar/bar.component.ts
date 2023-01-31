@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Whis } from 'src/app/interfaces/wish';
+import { Whis } from 'src/app/items/interfaces/wish';
 import { WHISES_DATA } from 'src/assets/data/wishes.json';
 
 @Component({

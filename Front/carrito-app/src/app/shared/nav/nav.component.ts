@@ -1,6 +1,6 @@
-import { Whis } from 'src/app/interfaces/wish';
-import { CarService } from '../../services/car.service';
 import { Component, OnInit } from '@angular/core';
+import { Whis } from 'src/app/items/interfaces/wish';
+import { CarService } from 'src/app/items/services/car.service';
 
 @Component({
   selector: 'app-nav',

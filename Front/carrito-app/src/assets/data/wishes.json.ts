@@ -1,4 +1,4 @@
-import { Whis } from "src/app/interfaces/wish";
+import { Whis } from 'src/app/items/interfaces/wish';
 import { v4 as uuid } from 'uuid';
 
 export const WHISES_DATA: Whis[] =

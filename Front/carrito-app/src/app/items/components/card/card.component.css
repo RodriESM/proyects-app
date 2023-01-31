@@ -1,0 +1,37 @@
+.row {
+  margin-bottom:20px;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid #e1e1e1;
+  background: white;
+}
+@media (min-width: 550px) {
+  .card {
+      text-align: left;
+  }
+}
+.card-body {
+  padding: 10px 20px;
+}
+
+.card-body p,
+.card h4 {
+  margin-bottom: 5px;
+}
+.card-body.precio {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.card-body .precio .comprado {
+  text-decoration: line-through;
+  color: greenyellow;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.card-body .precio span {
+  font-weight: 700;
+  font-size: 22px;
+}

@@ -107,7 +107,7 @@ export class ItemService {
       web: uri,
       precio: precio,
       comprado: false,
-      cantidad: 0,
+      cantidad: 1,
       imagen: img,
       estrellas: '../assets/img/estrellas.png'
     }
