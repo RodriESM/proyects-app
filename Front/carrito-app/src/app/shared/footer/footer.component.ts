@@ -18,7 +18,7 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public addNewWhis(): void{
-    this.itemService.addNewWhis();
+  public addNewWhis(event: Event): void{
+    this.itemService.addNewWhis(event);
   }
 }

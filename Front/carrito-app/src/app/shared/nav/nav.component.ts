@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Whis } from 'src/app/items/interfaces/wish';
-import { CarService } from 'src/app/items/services/car.service';
+import { WhisService } from 'src/app/items/services/whis.service';
 
 @Component({
   selector: 'app-nav',
@@ -12,23 +12,23 @@ export class NavComponent implements OnInit {
   public img: string = '/assets/img/logo.jpg';
   public total: number = 0;
 
-  constructor(private carService: CarService) { }
+  constructor(private wishService: WhisService) { }
 
   ngOnInit(): void {
-    this.carService.getTotal().subscribe(total => {
+    this.wishService.getTotal().subscribe(total => {
       this.total = total;
     })
   }
 
   getItems(): Whis[]{
-    return this.carService.getItems();
+    return this.wishService.getItems();
   }
 
   delete(whis: Whis): void{
-    this.carService.delete(whis);
+    this.wishService.delete(whis);
   }
 
   clean(): void{
-    this.carService.cleanCar();
+    this.wishService.cleanwhis();
   }
 }
